@@ -1,0 +1,64 @@
+{
+  "width": 960,
+  "height": 540,
+  "fps": 30,
+  "click": [120, 400],
+  "frames": [
+    {
+      "t": 0.0,
+      "detections": [
+        {"x": 120, "y": 400, "conf": 0.9, "track_id": 1},
+        {"x": 800, "y": 80, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.033,
+      "detections": [
+        {"x": 150, "y": 370, "conf": 0.9, "track_id": 1},
+        {"x": 790, "y": 90, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.066,
+      "detections": [
+        {"x": 210, "y": 310, "conf": 0.88, "track_id": 1},
+        {"x": 780, "y": 100, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.099,
+      "detections": [
+        {"x": 300, "y": 230, "conf": 0.86, "track_id": 1},
+        {"x": 770, "y": 110, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.132,
+      "detections": [
+        {"x": 420, "y": 160, "conf": 0.84, "track_id": 1},
+        {"x": 760, "y": 120, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.165,
+      "detections": [
+        {"x": 560, "y": 120, "conf": 0.83, "track_id": 1},
+        {"x": 750, "y": 130, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.198,
+      "detections": [
+        {"x": 700, "y": 150, "conf": 0.81, "track_id": 1},
+        {"x": 740, "y": 140, "conf": 0.95, "track_id": 2}
+      ]
+    },
+    {
+      "t": 0.231,
+      "detections": [
+        {"x": 820, "y": 220, "conf": 0.8, "track_id": 1},
+        {"x": 730, "y": 150, "conf": 0.95, "track_id": 2}
+      ]
+    }
+  ]
+}

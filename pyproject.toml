@@ -1,0 +1,46 @@
+[project]
+name = "funball"
+version = "0.1.0"
+description = "Live overlay for one indicated ball or puck: lock, speed-colored trail, no VLM."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "mikolaj92" }
+]
+dependencies = [
+  "opencv-python-headless>=4.8"
+]
+keywords = ["ball-tracking", "overlay", "sports", "opencv", "yolo"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3 :: Only",
+  "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+yolo = ["ultralytics>=8.3"]
+dev = ["ultralytics>=8.3"]
+
+[project.scripts]
+funball = "funball.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mikolaj92/FunBall"
+Repository = "https://github.com/mikolaj92/FunBall"
+Issues = "https://github.com/mikolaj92/FunBall/issues"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.lokay]
+test = "uv run python -m unittest discover -s tests"
