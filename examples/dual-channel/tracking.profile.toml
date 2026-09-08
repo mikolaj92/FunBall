@@ -1,0 +1,30 @@
+version = 1
+id = "object_tracking"
+mode = "select_one"
+
+[objective]
+id = "reliable_current_observation"
+
+[[signals]]
+id = "uncertainty"
+provider = "candidate.value"
+field = "uncertainty"
+prefer = "lower"
+weight = 1.0
+
+[[constraints]]
+id = "observation_must_be_usable"
+provider = "candidate.available"
+severity = "block"
+
+[decision]
+policy = "constrained_weighted_score"
+tie_breaker = "keep_current"
+close_margin = 0.05
+
+[stability]
+policy = "hysteresis"
+min_improvement = 0.10
+
+[uncertainty]
+when_constraints_block_all = "fallback"

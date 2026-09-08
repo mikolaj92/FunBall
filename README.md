@@ -8,7 +8,7 @@ FunBall is an experimental streaming video overlay for a ball, puck, or eventual
 
 The renderer, bounded trail, synthetic fixtures, and optional YOLO adapter work. **Reliable real-ball tracking has not yet been demonstrated.** Earlier detector experiments produced many false candidates; more boxes and longer locks were not improvements in accuracy.
 
-The current lock is a spatial association heuristic, not an appearance-based tracker. SAM, the dual-channel host, Splot integration, and compiled inference workers are **planned, not shipped**.
+The current lock is a spatial association heuristic, not an appearance-based tracker. A [synthetic replay through real Splot and the committed renderer](examples/dual-channel/README.md) now works. SAM inference, the live dual-channel host, and compiled inference workers remain **planned, not shipped**.
 
 ## Quick start
 

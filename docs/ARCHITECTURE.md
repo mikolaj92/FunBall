@@ -21,4 +21,4 @@ A miss returns no new detection. The lock can remain held briefly, and the exist
 {"x":640.0,"y":360.0,"conf":0.87,"track_id":3}
 ```
 
-This minimal detection contract is suitable for current fixtures. The planned observation protocol adds time, identity, provenance, and explicit missing states. An externally committed observation must eventually bypass BallLock to avoid selecting the target twice. No Splot/Fala/SAM integration is currently shipped.
+This minimal detection contract is suitable for current fixtures. The planned observation protocol adds time, identity, provenance, and explicit missing states. An externally committed observation must eventually bypass BallLock to avoid selecting the target twice. The optional `fusion.py` adapter now calls real Splot; `committed.py` renders its accepted observation without another lock. `observation.py` validates identity/time/status and `replay.py` exercises this path with synthetic JSONL. `evaluation.py` supplies initial correctness metrics. Fala hosting and actual SAM inference are not shipped.
