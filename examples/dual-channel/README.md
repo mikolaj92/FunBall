@@ -24,6 +24,12 @@ The fixture contains invented observations under `sam`/`tracker` channel names: 
 
 The API currently reports counts, precision/recall and center errors. It does not yet compute false-lock durations or recovery, and no human-annotated real-video dataset is bundled.
 
+## Replay on an actual video
+
+Add `--video match.avi` to the replay command to render on decoded source frames. The observation file must have one round per frame, zero-based contiguous frame IDs and PTS matching the source CFR rate (1 ms tolerance). Missing detections are explicit empty observation lists, not omitted frames. Mismatched or truncated inputs fail; no success result is written. Audio is not preserved and VFR is not supported by this diagnostic.
+
+A real video with empty observations is only a media-path check, not a tracking demo. Synthetic fixture coordinates must never be presented as model detections on a match.
+
 ## Remaining work
 
 Bounded media transport/lifecycle, actual SAM checkpoint execution, native runtime benchmarks, a fast tracker, confidence calibration, catch-up and Fala hosting remain open issues. Default CI skips real Splot integration unless the optional binding is available; run the explicit command above to validate the Mojo path.
